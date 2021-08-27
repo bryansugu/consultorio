@@ -1,0 +1,158 @@
+/* ---------------------------------- tabs  -----------------------------
+	------------------------------------------------------------------------------- */
+
+
+    section.tabs_container_centro{
+	
+        ul{
+            margin: 0;
+            padding: 0;
+            @include display-grid;
+            @include grid-parent-5-columns (1fr, 1fr, 1fr, 1fr, 1fr);
+            border-bottom: 2px solid $color_light_grey;
+            margin-bottom: 2rem;
+            
+            li{
+                text-align: center;
+                position: relative;
+                transition: all .2s ease-in-out;
+                
+                &:hover{
+                    &:after{
+                        width: 100%;
+                        height: 3px;
+                        background: $color_rosa_dark;
+                        position: absolute;
+                        content:"";
+                        left: 0;
+                        bottom: -2px;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+                
+                a{
+                    color:$color_rosa_dark;
+                    &:after{
+                        display: none;
+                    }
+                }
+                
+            }
+            
+            li.ui-state-active{
+                
+                &:after{
+                    width: 100%;
+                    height: 3px;
+                    background: $color_rosa_dark;
+                    position: absolute;
+                    content:"";
+                    left: 0;
+                    bottom: -2px;
+                }
+                
+            }
+            
+        }
+        
+        .ui-tabs-panel{
+            @include display-grid ;
+            @include grid-parent-2-columns (1fr, 2fr);
+            
+            .content_left{
+                padding: 2rem;
+            }
+            
+            .content_right{
+                padding: 5rem 4rem 2rem 4rem;
+                position: relative;
+                background: $color_rosa_light;
+                
+                &:before{
+                    width: 60%;
+                    height: 100%;
+                    background: $color_rosa_light;
+                    position: absolute;
+                    content: "";
+                    left: -15rem;
+                    top: 0;
+                    z-index: -1;
+                }
+                
+            }
+            
+        }
+        
+        #accordion,
+        .accordion{
+            
+            .click{
+                border: 1px solid $color_rosa_dark;
+                border-radius: .2rem;
+                padding: .5rem 1rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                background: url(../../images/svg/plus-icon.svg);
+                background-repeat: no-repeat;
+                background-position: 99% 50%;
+                transition: all .2s ease-in-out;
+                @include font_universal (
+                    $font_family_line_height: 24px,
+                    $font_family_weight: 300,
+                    $font_family_size: 17px,
+                    $font_family_color: $color_rosa_dark,
+                    $font_family_letter_spacing: 0,
+                    $font_family_group: $font_family_din
+                );
+                
+                &:hover{
+                    background: url(../../images/svg/plus-icon-white.svg) $color_rosa_dark;
+                    color: $color_white;
+                    background-repeat: no-repeat;
+                    background-position: 99% 50%;
+                }
+                
+            }
+            
+            .ui-accordion-content{
+                border: 1px solid $color_rosa_dark;
+                height: auto !important;
+                padding: 0 1rem;
+                border-radius: .2rem;
+                
+                ul{
+                    padding: inherit;
+                    margin: 1rem;
+                    border-bottom: 0;
+                    @include grid-parent-1-columns (1fr);
+                    
+                    &:hover{
+                        &:after{
+                            display: none;
+                        }
+                    }
+                    
+                    li{
+                        text-align: left;
+                        list-style-type: initial;
+                        
+                        &:hover{
+                            &:after{
+                                display: none;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }
+        
+    
+    
+    
+    
