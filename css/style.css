@@ -1103,6 +1103,10 @@ section.tabs_container_centro .accordion .ui-accordion-content ul li:hover:after
   color: #EC2462 !important;
 }
 
+.flickity-prev-next-button.previous {
+  color: #EC2462 !important;
+}
+
 /* ---------------------------------- grupos de apoyo  -----------------------------
 	------------------------------------------------------------------------------- */
 section.grupos_apoyo .first_fold {
