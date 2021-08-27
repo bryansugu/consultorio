@@ -1095,6 +1095,14 @@ section.tabs_container_centro .accordion .ui-accordion-content ul li:hover:after
   display: none;
 }
 
+.flickity-page-dots .dot {
+  background: #EC2462 !important;
+}
+
+.flickity-prev-next-button.next {
+  color: #EC2462 !important;
+}
+
 /* ---------------------------------- grupos de apoyo  -----------------------------
 	------------------------------------------------------------------------------- */
 section.grupos_apoyo .first_fold {
