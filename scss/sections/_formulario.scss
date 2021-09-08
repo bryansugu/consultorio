@@ -2,6 +2,9 @@
 	------------------------------------------------------------------------------- */
 
 
+    $phone: 380px;
+    $small: 450px;
+        $medium: 900px;
     section.formulario{
         text-align: center;
         margin: 3rem auto;
@@ -34,6 +37,12 @@
         a{
             @include btn-white-2;
             margin: 2rem auto 1rem
+        }
+        h1{
+            color:#EC2462;
+            @media (max-width: $breakpoint_3){
+                width: 250px;
+            }
         }
         
         .cards_container{

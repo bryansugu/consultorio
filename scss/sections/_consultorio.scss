@@ -1,7 +1,9 @@
 /* ---------------------------------- Consultorio  -----------------------------
 	------------------------------------------------------------------------------- */
 
-
+    $phone: 380px;
+        $small: 450px;
+        $medium: 900px;
 section.consultorio{
 	@include max-width-2;
 	@include display-grid;
@@ -11,14 +13,29 @@ section.consultorio{
 	@media (max-width: $breakpoint_3){
 		@include grid-parent-1-columns (1fr);
 	}
-	
+	h4{
+		color:#EC2462;
+		font-weight: bold;
+		@media screen and (max-width: $small) {
+			font-size: 20px;
+		line-height: 33px;
+		margin: 0;
+		padding: 0;
+		}
+	}
 	.left_content{
 		    justify-self: center;
+			padding-right:40px;
+			@media screen and (max-width: $small) {
+				padding-right:0;
+            }
 	}
 	
 	.right_content{
-		
-		
+		padding-left:40px;
+		@media screen and (max-width: $small) {
+			padding-left:0px;
+		}
 	}
 	
 }

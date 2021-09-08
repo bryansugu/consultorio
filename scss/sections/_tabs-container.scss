@@ -1,7 +1,9 @@
 /* ---------------------------------- tabs  -----------------------------
 	------------------------------------------------------------------------------- */
 
-
+    $phone: 380px;
+        $small: 450px;
+        $medium: 900px;
 section.tabs_container{
 	
 	ul{
@@ -11,6 +13,9 @@ section.tabs_container{
 		@include grid-parent-5-columns (1fr, 1fr, 1fr, 1fr, 1fr);
 		border-bottom: 2px solid $color_light_grey;
 		margin-bottom: 2rem;
+		@media screen and (max-width: $small) {
+			grid-template-columns: 1fr;
+		}
 		
 		li{
 			text-align: center;
@@ -57,7 +62,10 @@ section.tabs_container{
 	.ui-tabs-panel{
 		@include display-grid ;
 		@include grid-parent-2-columns (1fr, 2fr);
-		
+		//some CSS
+		@media screen and (max-width: $small) {
+			grid-template-columns:1fr;
+		}
 		.content_left{
 			padding: 2rem;
 		}
@@ -66,6 +74,9 @@ section.tabs_container{
 			padding: 5rem 4rem 2rem 4rem;
 			position: relative;
 			background: $color_light_blue;
+			@media screen and (max-width: $small) {
+				padding: 2rem;
+			}
 			
 			&:before{
 				width: 60%;
@@ -124,6 +135,10 @@ section.tabs_container{
 				margin: 1rem;
 				border-bottom: 0;
 				@include grid-parent-1-columns (1fr);
+				@media screen and (max-width: $small) {
+					padding: 1rem 0rem 0rem 1rem;
+					margin: 0;
+					}
 				
 				&:hover{
 					&:after{
